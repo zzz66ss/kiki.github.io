@@ -1,0 +1,12 @@
+{
+  "description": "网球与皮克球装备线上商城小程序",
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "tennis-pickleball-shop",
+  "simulatorType": "wechat"
+}

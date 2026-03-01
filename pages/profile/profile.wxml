@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card user-card">
+    <view class="avatar">🏅</view>
+    <view class="name">网球爱好者</view>
+    <view class="muted">欢迎来到网球&皮克球装备商城</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">我的资产</view>
+    <view class="grid">
+      <block wx:for="{{stats}}" wx:key="label">
+        <view class="grid-item">
+          <view class="value">{{item.value}}</view>
+          <view class="label">{{item.label}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

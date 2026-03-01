@@ -1,0 +1,15 @@
+<view class="container" wx:if="{{product}}">
+  <view class="card hero">
+    <view class="cover">{{product.cover}}</view>
+    <view class="name">{{product.name}}</view>
+    <view class="meta">{{product.categoryLabel}}</view>
+    <view class="price">{{product.priceText}}</view>
+    <view class="desc">{{product.description}}</view>
+    <view class="tag-list">
+      <block wx:for="{{product.tags}}" wx:key="*this">
+        <text class="tag">{{item}}</text>
+      </block>
+    </view>
+    <button class="btn-primary" bindtap="addToCart">加入购物车</button>
+  </view>
+</view>

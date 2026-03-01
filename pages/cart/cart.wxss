@@ -1,0 +1,102 @@
+.item {
+  display: flex;
+  padding: 14rpx 0;
+  border-bottom: 1rpx solid #eef2f7;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  margin-right: 8rpx;
+}
+
+.check {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  border: 2rpx solid #d1d5db;
+  margin-right: 10rpx;
+  text-align: center;
+  line-height: 32rpx;
+  color: transparent;
+}
+
+.check.active {
+  background: #0a3d62;
+  border-color: #0a3d62;
+  color: #fff;
+}
+
+.cover {
+  font-size: 40rpx;
+}
+
+.main {
+  flex: 1;
+}
+
+.name {
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.price {
+  margin-top: 6rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.actions {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qty-box {
+  display: inline-flex;
+  align-items: center;
+  border: 1rpx solid #d1d5db;
+  border-radius: 8rpx;
+}
+
+.qty-btn,
+.qty {
+  width: 42rpx;
+  text-align: center;
+  line-height: 42rpx;
+}
+
+.delete {
+  color: #b91c1c;
+  font-size: 24rpx;
+}
+
+.subtotal {
+  width: 130rpx;
+  text-align: right;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+}
+
+.footer {
+  margin-top: 18rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  color: #b91c1c;
+  font-size: 34rpx;
+  font-weight: 700;
+}

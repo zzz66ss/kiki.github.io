@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="hero card">
+    <view class="hero-title">网球 & 皮克球装备商城</view>
+    <view class="hero-subtitle">专业装备，一站购齐，快速发货</view>
+    <button class="btn-primary hero-btn" bindtap="goCategory">立即选购</button>
+  </view>
+
+  <view class="card banner-card">
+    <view class="section-title">活动精选</view>
+    <block wx:for="{{banners}}" wx:key="*this">
+      <view class="banner-item">{{item}}</view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="section-title">热卖商品</view>
+    <view class="product-list">
+      <block wx:for="{{hotProducts}}" wx:key="id">
+        <view class="product-item" data-id="{{item.id}}" bindtap="goDetail">
+          <text class="cover">{{item.cover}}</text>
+          <view class="content">
+            <view class="name">{{item.name}}</view>
+            <view class="meta">{{item.categoryLabel}}</view>
+            <view class="price">{{item.priceText}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
