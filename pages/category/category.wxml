@@ -1,0 +1,32 @@
+<view class="container">
+  <scroll-view scroll-x class="category-bar" enable-flex="true">
+    <block wx:for="{{categories}}" wx:key="key">
+      <view
+        class="chip {{activeCategory===item.key ? 'chip-active' : ''}}"
+        data-key="{{item.key}}"
+        bindtap="changeCategory"
+      >
+        {{item.label}}
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="card">
+    <block wx:if="{{productList.length}}">
+      <block wx:for="{{productList}}" wx:key="id">
+        <view class="row" data-id="{{item.id}}" bindtap="goDetail">
+          <text class="cover">{{item.cover}}</text>
+          <view class="body">
+            <view class="name">{{item.name}}</view>
+            <view class="desc">{{item.description}}</view>
+            <view class="bottom">
+              <text class="price">{{item.priceText}}</text>
+              <text class="stock">库存 {{item.stock}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <view wx:else class="empty">暂无商品</view>
+  </view>
+</view>

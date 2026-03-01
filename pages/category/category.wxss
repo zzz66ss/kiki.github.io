@@ -1,0 +1,70 @@
+.category-bar {
+  white-space: nowrap;
+  margin-bottom: 18rpx;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 20rpx;
+  margin-right: 12rpx;
+  background: #fff;
+  color: #374151;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+}
+
+.chip-active {
+  background: #0a3d62;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #eef2f7;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.cover {
+  font-size: 46rpx;
+  margin-right: 12rpx;
+}
+
+.name {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.desc {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #6b7280;
+}
+
+.bottom {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.stock {
+  font-size: 22rpx;
+  color: #6b7280;
+}
+
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 40rpx 0;
+}

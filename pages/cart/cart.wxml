@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="card" wx:if="{{cart.length}}">
+    <block wx:for="{{cart}}" wx:key="id">
+      <view class="item">
+        <view class="left" data-id="{{item.id}}" bindtap="toggleSelect">
+          <text class="check {{item.selected ? 'active' : ''}}">{{item.selected ? '✓' : ''}}</text>
+          <text class="cover">{{item.cover}}</text>
+        </view>
+        <view class="main">
+          <view class="name">{{item.name}}</view>
+          <view class="price">{{item.priceText}}</view>
+          <view class="actions">
+            <view class="qty-box">
+              <text class="qty-btn" data-id="{{item.id}}" data-delta="-1" bindtap="changeQty">-</text>
+              <text class="qty">{{item.quantity}}</text>
+              <text class="qty-btn" data-id="{{item.id}}" data-delta="1" bindtap="changeQty">+</text>
+            </view>
+            <text class="delete" data-id="{{item.id}}" bindtap="removeItem">删除</text>
+          </view>
+        </view>
+        <view class="subtotal">{{item.subtotalText}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="card empty" wx:else>
+    购物车空空如也，快去挑选装备吧～
+  </view>
+
+  <view class="footer card">
+    <view>
+      <view class="muted">已选商品总计</view>
+      <view class="total">{{totalText}}</view>
+    </view>
+    <button class="btn-primary" bindtap="checkout">去结算</button>
+  </view>
+</view>
